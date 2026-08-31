@@ -25,6 +25,13 @@ Product code means runtime application code, including backend and frontend sour
 
 Do not claim tests, builds, migrations, integrations, or user flows are verified unless the corresponding command or flow was actually run successfully. Record environmental or external blockers explicitly.
 
+## Repository, deployment, and infrastructure tooling
+
+- Use the GitHub CLI to manage the GitHub repository. If the GitHub CLI is not available on the machine, download and install it from an official source, then use it for repository operations.
+- Use the Railway CLI to deploy the application and troubleshoot deployment issues. If the Railway CLI is not available on the machine, download and install it from an official source, then use it for Railway operations.
+- Use the Cloudflare CLI to manage DNS zones, SSL, and tunneling. If the Cloudflare CLI is not available on the machine, download and install it from an official source, then use it for Cloudflare operations.
+- Verify authentication and the selected account, project, environment, zone, or tunnel before making remote changes. Do not expose access tokens or credentials in commands, logs, commits, or `progress.md`.
+
 ## Architecture
 
 - Use a monorepo-style separation between the Vite React frontend and NestJS backend. Do not import backend implementation details into the frontend or frontend code into the backend.
